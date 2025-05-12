@@ -1,0 +1,26 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int t;
+    cin>>t;
+    while(t--){
+        int n, flag=1;
+        cin>>n;
+        vector<int> v;
+        for(int i=0; i<n; i++){
+            int x;
+            cin>>x;
+            v.push_back(x);
+        }
+        for(int i=0; i<n-1; i++){
+            if(v[i]>v[i+1]){
+                flag=0;
+                break;
+            }
+        }
+        if(flag) cout<<"YES"<<endl;
+        else cout<<"NO"<<endl;
+    }
+    return 0;
+}
